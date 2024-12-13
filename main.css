@@ -42,7 +42,7 @@ body, html {
 }
 
 .navbar-text {
-    font-size: 8vh; /* Reduce font size for better fit */
+    font-size: 10vh; /* Reduce font size for better fit */
     color: black;
     text-transform: uppercase; /* Optional: Make text uppercase */
     letter-spacing: -2px; /* Add some letter spacing */
