@@ -1,0 +1,119 @@
+/* General Reset */
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('helvetica-255/Helvetica.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body, html {
+    width: 100%;
+    height: 100%;
+    font-family: 'MyCustomFont';
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: white;
+    color: #fff;
+ 
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-text {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-right img {
+    width: 100px;
+    height: auto;
+}
+
+/* Main Content */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 2rem;
+}
+
+/* Product Row */
+.product-row {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+/* Product Item */
+.product-item {
+    text-align: center;
+    width: 30%;
+    margin: 10px;
+}
+
+.product-box {
+    display: block;
+    background-color: rgb(238, 238, 238); /* Remove background */
+    border: 0px solid rgb(172, 172, 172); /* Add black border */
+    width: 100%;
+    padding: 1rem;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.product-box img {
+    width: 100%;
+    height: auto;
+}
+
+.product-name {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    font-weight: bold;
+    font-family: 'MyCustomFont';
+   
+    color: black;
+    text-align: left;
+}
+
+.product-price {
+    font-size: 0.8rem;
+    color: black;
+    margin-top: 0.2rem;
+    font-family: 'MyCustomFont';
+    text-align: left;
+   
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product-item {
+        width: 45%; /* Two items per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-item {
+        width: 100%; /* One item per row on very small screens */
+    }
+}
