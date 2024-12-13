@@ -114,7 +114,15 @@ body, html {
         width: 45%; /* Two items per row on smaller screens */
     }
 }
-
+@media (max-width: 768px) {
+    .navbar-text {
+        font-size: 13vw;
+        color: black;
+        text-transform: uppercase; /* Optional: Make text uppercase */
+        letter-spacing: -2px; /* Add some letter spacing */
+        font-weight: bold;/* Increase font size for smaller screens */
+    }
+}
 @media (max-width: 480px) {
     .product-item {
         width: 100%; /* One item per row on very small screens */
