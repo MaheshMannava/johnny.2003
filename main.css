@@ -16,7 +16,7 @@
 body, html {
     width: 100%;
     height: 100%;
-    font-family: 'MyCustomFont', Arial, sans-serif; /* Added fallback fonts */
+    font-family: 'MyCustomFont'; /* Added fallback fonts */
     overflow: hidden; /* Prevent scrolling */
 }
 
@@ -93,7 +93,11 @@ body, html {
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .navbar-text {
-        font-size: 13vw; /* Increase font size for smaller screens */
+        font-size: 13vw;
+        color: black;
+        text-transform: uppercase; /* Optional: Make text uppercase */
+        letter-spacing: -2px; /* Add some letter spacing */
+        font-weight: bold;/* Increase font size for smaller screens */
     }
 
     .bottom-bar {
