@@ -137,3 +137,13 @@ body, html {
         padding: 0 1rem;
     }
 }
+
+@media (max-width: 768px) {
+    .navbar-text {
+        font-size: 13vw;
+        color: black;
+        text-transform: uppercase; /* Optional: Make text uppercase */
+        letter-spacing: -2px; /* Add some letter spacing */
+        font-weight: bold;/* Increase font size for smaller screens */
+    }
+}
