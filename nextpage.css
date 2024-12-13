@@ -40,6 +40,8 @@ body, html {
     color: black;
     font-size: 1.5rem;
     font-weight: bold;
+    text-transform: uppercase; /* Optional: Make text uppercase */
+    letter-spacing: -2px; /* Add some letter spacing */
 }
 
 .navbar-right img {
@@ -91,7 +93,8 @@ body, html {
     margin-top: 0.5rem;
     font-weight: bold;
     font-family: 'MyCustomFont';
-   
+    text-transform: uppercase; /* Optional: Make text uppercase */
+    letter-spacing: -2px; /* Add some letter spacing */
     color: black;
     text-align: left;
 }
