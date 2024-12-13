@@ -133,12 +133,6 @@ body, html {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .product-details {
-        padding: 0 1rem;
-    }
-}
-
-@media (max-width: 768px) {
     .navbar-text {
         font-size: 13vw;
         color: black;
@@ -147,3 +141,10 @@ body, html {
         font-weight: bold;/* Increase font size for smaller screens */
     }
 }
+
+@media (max-width: 768px) {
+    .product-details {
+        padding: 0 1rem;
+    }
+}
+
