@@ -97,6 +97,7 @@ body, html {
         font-size: 10vw; /* Adjust font size for smaller screens */
         color: black;
         font-weight: bold; /* Ensure visibility */
+        letter-spacing: -0.5px;
     }
 
     .bottom-bar {
