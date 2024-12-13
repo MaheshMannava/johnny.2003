@@ -94,10 +94,9 @@ body, html {
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .navbar-text {
-        font-size: 13vw;
+        font-size: 10vw; /* Adjust font size for smaller screens */
         color: black;
-      
-        font-weight: bold;/* Increase font size for smaller screens */
+        font-weight: bold; /* Ensure visibility */
     }
 
     .bottom-bar {
