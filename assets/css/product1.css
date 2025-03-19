@@ -1,7 +1,7 @@
 /* General Reset */
 @font-face {
     font-family: 'MyCustomFont';
-    src: url('helvetica-255/Helvetica.ttf') format('truetype');
+    src: url('../fonts/Helvetica.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
