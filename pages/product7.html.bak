@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="x-icon" href="../assets/images/chrome2.png">
+    <title>©.JOHNNY.2003</title>
+    <link rel="stylesheet" href="../assets/css/product1.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="nextpage.html" class="navbar-text">&copy;.JOHNNY.2003</a>
+        </div>
+        <div class="navbar-right">
+            <img src="../assets/images/bag.png" alt="bag" class="bag-icon">
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="product-container">
+            <!-- Image Carousel -->
+            <div class="carousel">
+                <div class="carousel-images">
+                    <img src="../assets/images/cargos johny.png" alt="Product Image 1">
+                    <img src="../assets/images/cargos johny_1.png" alt="Product Image 2">
+                    
+                    <img src="../assets/images/cargos johny_2.png" alt="Product Image 3">
+                    <img src="../assets/images/cargos johny_3.png" alt="Product Image 4">
+                    <img src="../assets/images/cargos johny_4.png" alt="Product Image 5">
+                    <img src="../assets/images/cargos johny_5.png" alt="Product Image 6">
+                </div>
+                <div class="carousel-buttons">
+                    <button class="carousel-button" id="prev">&#10094;</button>
+                    <button class="carousel-button" id="next">&#10095;</button>
+                </div>
+            </div>
+
+            <!-- Product Details -->
+            <div class="product-details">
+                <h1 class="product-name">KARATE SATHI TEE</h1>
+                <p class="product-description">₹1500.00</p>
+                <p class="product-description">Pigment dyed tee in midweight 6.5oz cotton jersey. Features screenprinted graphics.
+
+                    - Shortsleeve
+                    - True to size 
+                    - Unisex
+                    - Material: 100% cotton</p>
+                <div class="product-size">
+                    <div class="size-option" data-size="S">S</div>
+                    <div class="size-option" data-size="M">M</div>
+                    <div class="size-option" data-size="L">L</div>
+                    <div class="size-option" data-size="XL">XL</div>
+                    <div class="size-option" data-size="XXL">XXL</div>
+                </div>
+                <button class="add-to-cart">ADD TO BAG</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="../assets/js/cart.js"></script>
+    <script type="module" src="../assets/js/product1.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="x-icon" href="../assets/images/chrome2.png">
+    <title>©.JOHNNY.2003</title>
+    <link rel="stylesheet" href="../assets/css/product1.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="nextpage.html" class="navbar-text">&copy;.JOHNNY.2003</a>
+        </div>
+        <div class="navbar-right">
+            <img src="../assets/images/bag.png" alt="bag">
+        </div>
+        
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="product-container">
+            <!-- Image Carousel -->
+            <div class="carousel">
+                <div class="carousel-images">
+                    <img src="../assets/images/hoodie fit.png" alt="Product Image 1">
+                    <img src="../assets/images/hoodie fit_1.png" alt="Product Image 2">
+                    <img src="../assets/images/hoodie fit_2.png" alt="Product Image 3">
+                </div>
+                <div class="carousel-buttons">
+                    <button class="carousel-button" id="prev">&#10094;</button>
+                    <button class="carousel-button" id="next">&#10095;</button>
+                </div>
+            </div>
+
+            <!-- Product Details -->
+            <div class="product-details">
+                <h1 class="product-name">JOHNNY HOODIE</h1>
+                <p class="product-description">₹3500.00</p>
+                <p class="product-description">Relaxed fit hooded sweatshirt in a heavy 15.8oz cotton blend fleece- Johnny logo screenprinted on the back
+
+                    - Round drawcord in hood
+                    - #5 YKK metal zip closure
+                    - Ribbed cuffs and hem</p>
+                <div class="product-size">
+                     S    M    L    XL   XXL
+                </div>
+                <button class="add-to-cart">ADD TO BAG</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/product1.js"></script>
+</body>
+</html>

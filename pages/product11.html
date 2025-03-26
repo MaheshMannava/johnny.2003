@@ -6,17 +6,34 @@
     <link rel="shortcut icon" type="x-icon" href="../assets/images/chrome2.png">
     <title>©.JOHNNY.2003</title>
     <link rel="stylesheet" href="../assets/css/product1.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../assets/css/auth.css"></head>
+    <link rel="stylesheet" href="../assets/css/notifications.css"><body>
     <!-- Navbar -->
     <nav class="navbar">
         <div class="navbar-left">
             <a href="nextpage.html" class="navbar-text">&copy;.JOHNNY.2003</a>
         </div>
         <div class="navbar-right">
-            <img src="../assets/images/bag.png" alt="bag">
+            <div class="cart-container">
+                <img src="../assets/images/bag.png" alt="bag" class="bag-icon">
+                <!-- Cart Dropdown -->
+                <div id="cart-dropdown" class="cart-dropdown">
+                    <div class="cart-header">
+                        <h3>Your Cart</h3>
+                    </div>
+                    <div id="cart-items" class="cart-items">
+                        <!-- Cart items will be dynamically added here -->
+                    </div>
+                    <div class="cart-footer">
+                        <div class="cart-total">
+                            <span>Total:</span>
+                            <span id="cart-total-amount">₹0</span>
+                        </div>
+                        <button id="checkout-btn" class="checkout-btn">Checkout</button>
+                    </div>
+                </div>
+            </div>
         </div>
-        
     </nav>
 
     <!-- Main Content -->
@@ -45,13 +62,23 @@
                     - Unisex
                     - Material: 100% cotton</p>
                 <div class="product-size">
-                     S    M    L    XL   XXL
+                    <div class="size-option" data-size="S">S</div>
+                    <div class="size-option" data-size="M">M</div>
+                    <div class="size-option" data-size="L">L</div>
+                    <div class="size-option" data-size="XL">XL</div>
+                    <div class="size-option" data-size="XXL">XXL</div>
                 </div>
-                <button class="add-to-cart">ADD TO BAG</button>
-            </div>
+                <button id="add-to-cart" class="add-to-cart">ADD TO BAG</button>
+                <p id="auth-required-message" class="auth-required" style="display: none; color: red; margin-top: 10px;">Please complete checkout to continue.</p>            </div>
         </div>
     </div>
 
-    <script src="../assets/js/product1.js"></script>
+    <!-- Scripts -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script type="module" src="../assets/js/mcp-supabase-bridge.js"></script>
+    <script type="module" src="../assets/js/supabase.js"></script>
+    <script type="module" src="../assets/js/auth.js"></script>
+    <script type="module" src="../assets/js/cart.js"></script>
+    <script type="module" src="../assets/js/product.js"></script>
 </body>
 </html>

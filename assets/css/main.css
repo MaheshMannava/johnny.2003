@@ -16,8 +16,9 @@
 body, html {
     width: 100%;
     height: 100%;
-    font-family: 'MyCustomFont'; /* Added fallback fonts */
+    font-family: 'Arial', sans-serif;
     overflow: hidden; /* Prevent scrolling */
+    background-color: #f8f8f8;
 }
 
 /* Container */
@@ -25,36 +26,104 @@ body, html {
     position: relative;
     width: 100%;
     height: 100%;
+    max-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
+/* Navbar */
 .navbar {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    background: transparent;
+    background-color: transparent;
     z-index: 10;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    padding: 0.5rem;
-    text-align: center;
+    padding: 15px 20px;
+    height: auto;
+    flex-wrap: wrap;
 }
 
 .navbar-text {
-    font-size: 10vh; /* Reduce font size for better fit */
-    color: black;
-    text-transform: uppercase; /* Optional: Make text uppercase */
-    letter-spacing: -2px; /* Add some letter spacing */
-    font-weight: bold;
-    width: 100%;
-    text-align: left;
     text-decoration: none;
-    white-space: nowrap; /* Prevent wrapping of the text */
-    overflow: hidden; /* Prevent text spilling outside */
-    text-overflow: ellipsis; /* Add ellipsis if text is too long */
+    color: black;
+    font-size: 44px;
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0px;
+    transition: color 0.3s ease;
+    line-height: 1;
+    text-transform: uppercase;
 }
-/* Image Content */
+
+.navbar-text:hover {
+    color: #555;
+}
+
+/* Auth Buttons for homepage */
+.auth-buttons {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.login-register-container {
+    display: flex;
+    gap: 15px;
+}
+
+/* Override auth.css styles for the homepage */
+.navbar .auth-btn {
+    background-color: transparent;
+    border: 2px solid black;
+    color: black;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    min-width: 80px;
+    text-align: center;
+}
+
+.navbar .auth-btn:hover {
+    background-color: black;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.navbar .auth-btn:active {
+    transform: scale(0.98);
+}
+
+/* User profile styling for homepage */
+.navbar .user-profile {
+    display: none; /* Hidden by default, shown via JS when logged in */
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #333;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    overflow: hidden;
+    border: 2px solid black;
+}
+
+.navbar .user-initials {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
 /* Image Content */
 .image-content {
     position: absolute;
@@ -85,22 +154,75 @@ body, html {
     background: transparent;
     text-align: right;
     color: #000000;
-    padding: 0.5rem;
+    padding: 15px;
     z-index: 10;
-    font-size: 1rem;
-    
+    font-size: 14px;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .navbar-text {
-        font-size: 10vw; /* Adjust font size for smaller screens */
-        color: black;
-        font-weight: bold; /* Ensure visibility */
-        letter-spacing: -0.5px;
-    }
+/* Hero Section */
+.hero {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
 
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+/* Footer */
+.footer {
+    padding: 1rem;
+    background-color: white;
+    text-align: center;
+    font-size: 0.9rem;
+    border-top: 1px solid #eee;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 15px;
+    }
+    
+    .navbar-text {
+        font-size: 36px;
+    }
+    
+    .auth-buttons {
+        gap: 10px;
+    }
+    
+    .hero {
+        padding: 1rem;
+    }
+    
     .bottom-bar {
-        font-size: 0.8rem; /* Slightly smaller text for the footer */
+        padding: 10px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 8px 10px;
+    }
+    
+    .navbar-text {
+        font-size: 28px;
+    }
+    
+    .hero {
+        padding: 0.5rem;
+    }
+    
+    .bottom-bar {
+        padding: 8px;
+        font-size: 11px;
     }
 }

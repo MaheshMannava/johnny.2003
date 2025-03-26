@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="x-icon" href="../assets/images/chrome2.png">
+    <title>©.JOHNNY.2003</title>
+    <link rel="stylesheet" href="../assets/css/product1.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="nextpage.html" class="navbar-text">&copy;.JOHNNY.2003</a>
+        </div>
+        <div class="navbar-right">
+            <div class="cart-container">
+                <img src="../assets/images/bag.png" alt="bag" class="bag-icon">
+                <!-- Cart Dropdown -->
+                <div id="cart-dropdown" class="cart-dropdown">
+                    <div class="cart-header">
+                        <h3>Your Cart</h3>
+                    </div>
+                    <div id="cart-items" class="cart-items">
+                        <!-- Cart items will be dynamically added here -->
+                    </div>
+                    <div class="cart-footer">
+                        <div class="cart-total">
+                            <span>Total:</span>
+                            <span id="cart-total-amount">₹0</span>
+                        </div>
+                        <button id="checkout-btn" class="checkout-btn">Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="product-container">
+            <!-- Image Carousel -->
+            <div class="carousel">
+                <div class="carousel-images">
+                    <img src="../assets/images/sleeve johnny - Copy_2.png" alt="Product Image 1">
+                    <img src="../assets/images/sleeve johnny - Copy_1.png" alt="Product Image 1">
+                    <img src="../assets/images/sleeve johnny - Copy.png" alt="Product Image 2">
+                    
+                    <img src="../assets/images/sleeve johnny - Copy_3.png" alt="Product Image 3">
+                    <img src="../assets/images/sleeve johnny - Copy_4.png" alt="Product Image 4">
+                    <img src="../assets/images/sleeve johnny - Copy_5.png" alt="Product Image 4">
+                </div>
+                <div class="carousel-buttons">
+                    <button class="carousel-button" id="prev">&#10094;</button>
+                    <button class="carousel-button" id="next">&#10095;</button>
+                </div>
+            </div>
+
+            <!-- Product Details -->
+            <div class="product-details">
+                <h1 class="product-name">COURT KNIT</h1>
+                <p class="product-description">₹2000.00</p>
+                <p class="product-description">Relaxed fit crewneck sweater in waffle-knit cashmere. Johnny logo with court markings along with the label stitched at the hem.
+
+                    - Ribbed edges
+                    - Relaxed fit
+                    - Unisex</p>
+                <div class="product-size">
+                    <div class="size-option" data-size="S">S</div>
+                    <div class="size-option" data-size="M">M</div>
+                    <div class="size-option" data-size="L">L</div>
+                    <div class="size-option" data-size="XL">XL</div>
+                    <div class="size-option" data-size="XXL">XXL</div>
+                </div>
+                <button class="add-to-cart">ADD TO BAG</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/product1.js"></script>
+</body>
+</html>

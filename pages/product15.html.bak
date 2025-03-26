@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="x-icon" href="../assets/images/chrome2.png">
+    <title>©.JOHNNY.2003</title>
+    <link rel="stylesheet" href="../assets/css/product1.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="nextpage.html" class="navbar-text">&copy;.JOHNNY.2003</a>
+        </div>
+        <div class="navbar-right">
+            <div class="cart-container">
+                <img src="../assets/images/bag.png" alt="bag" class="bag-icon">
+                <!-- Cart Dropdown -->
+                <div id="cart-dropdown" class="cart-dropdown">
+                    <div class="cart-header">
+                        <h3>Your Cart</h3>
+                    </div>
+                    <div id="cart-items" class="cart-items">
+                        <!-- Cart items will be dynamically added here -->
+                    </div>
+                    <div class="cart-footer">
+                        <div class="cart-total">
+                            <span>Total:</span>
+                            <span id="cart-total-amount">₹0</span>
+                        </div>
+                        <button id="checkout-btn" class="checkout-btn">Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="product-container">
+            <!-- Image Carousel -->
+            <div class="carousel">
+                <div class="carousel-images">
+                    <img src="../assets/images/jack2_5.png" alt="Product Image 2">
+                    <img src="../assets/images/jack2_1.png" alt="Product Image 1">
+                  
+                </div>
+                <div class="carousel-buttons">
+                    <button class="carousel-button" id="prev">&#10094;</button>
+                    <button class="carousel-button" id="next">&#10095;</button>
+                </div>
+            </div>
+
+            <!-- Product Details -->
+            <div class="product-details">
+                <h1 class="product-name">JOHNNY RAW DENIM</h1>
+                <p class="product-description">₹4000.00</p>
+                <p class="product-description">Baggy jean in washed cotton canvas with a needle punch effect - Oversized waist with a relaxed rise and roomy thigh that tapers to the cuff-  Features branded nickel shank hardware and a Johnny logo- Size down for a true-to-size fit in the waist, or order your normal size for a baggier fit
+
+                    - Button fly
+                    - Belt loops</p>
+                <div class="product-size">
+                    <div class="size-option" data-size="28">28</div>
+                    <div class="size-option" data-size="30">30</div>
+                    <div class="size-option" data-size="32">32</div>
+                    <div class="size-option" data-size="34">34</div>
+                    <div class="size-option" data-size="36">36</div>
+                    <div class="size-option" data-size="38">38</div>
+                </div>
+                <button class="add-to-cart">ADD TO BAG</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/product1.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+/* Product Notification Styles */
+.product-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #2ecc71; /* Default success color */
+    color: white;
+    padding: 12px 20px;
+    border-radius: 4px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s, transform 0.3s;
+    max-width: 300px;
+    word-wrap: break-word;
+    font-weight: bold;
+}
+
+.product-notification.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.product-notification.error {
+    background-color: #e74c3c; /* Error color */
+}
+
+/* Add to Bag Button Styles */
+.add-to-bag-btn {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 2px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s, background-color 0.3s;
+    font-family: 'MyCustomFont', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.product-box {
+    position: relative;
+}
+
+.product-box:hover .add-to-bag-btn {
+    opacity: 1;
+}
+
+.add-to-bag-btn:hover {
+    background-color: #333;
+}
+
+/* Improve visibility of button on light images */
+.add-to-bag-btn {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Product Page Add to Cart Button Styles */
+.add-to-cart {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.add-to-cart.enabled {
+    opacity: 1;
+    cursor: pointer;
+}
+
+/* Cart Badge Styles */
+.cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+} 

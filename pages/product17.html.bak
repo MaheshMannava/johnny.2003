@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="x-icon" href="../assets/images/chrome2.png">
+    <title>©.JOHNNY.2003</title>
+    <link rel="stylesheet" href="../assets/css/product1.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="nextpage.html" class="navbar-text">&copy;.JOHNNY.2003</a>
+        </div>
+        <div class="navbar-right">
+            <img src="../assets/images/bag.png" alt="bag" class="bag-icon">
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="product-container">
+            <!-- Image Carousel -->
+            <div class="carousel">
+                <div class="carousel-images">
+                    <img src="../assets/images/new era johnny.png" alt="Product Image 2">
+                    
+                  
+                </div>
+                <div class="carousel-buttons">
+                    <button class="carousel-button" id="prev">&#10094;</button>
+                    <button class="carousel-button" id="next">&#10095;</button>
+                </div>
+            </div>
+
+            <!-- Product Details -->
+            <div class="product-details">
+                <h1 class="product-name">JOHNNY x NEW ERA CAP</h1>
+                <p class="product-description">₹2000.00</p>
+                <p class="product-description">New Era Essential 59FIFTY Fitted cap in collaboration with Johnny- Featuring an all Black blank crown, as well as our signature flag logo embroidered to the left. A flat visor keeps bright lights from the eyes and shades the face, featuring a fitted crown for maximum comfort.
+
+                    All Black plain fitted crown
+                    Fitted crown
+                    Flat visor</p>
+                <div class="product-size">
+                    Sizes: [6 7/8]  [7]   [7 1/8]  [7 4/8]  [7 3/8]  [7 1/2]   [7 5/8]   [7 3/8]  [8]
+                </div>
+                <button class="add-to-cart">ADD TO BAG</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="../assets/js/cart.js"></script>
+    <script type="module" src="../assets/js/product1.js"></script>
+</body>
+</html>

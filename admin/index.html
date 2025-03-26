@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Johnny's Store</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="admin-styles.css">
+    <script src="../assets/js/supabase.js" defer></script>
+    <script src="../assets/js/mcp-supabase-bridge.js" defer></script>
+    <style>
+        .admin-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .admin-badge {
+            background-color: #dc3545;
+            color: white;
+            padding: 3px 8px;
+            font-size: 0.8rem;
+            border-radius: 4px;
+            margin-left: 10px;
+        }
+        
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .dashboard-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .dashboard-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+        
+        .dashboard-card-header {
+            background-color: #343a40;
+            color: white;
+            padding: 15px 20px;
+            font-size: 1.2rem;
+        }
+        
+        .dashboard-card-body {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .dashboard-card-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: #007bff;
+        }
+        
+        .dashboard-card-description {
+            margin-bottom: 20px;
+            color: #6c757d;
+        }
+        
+        .dashboard-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        
+        .dashboard-btn:hover {
+            background-color: #0069d9;
+        }
+        
+        .stock-icon::before {
+            content: "📦";
+        }
+        
+        .orders-icon::before {
+            content: "📋";
+        }
+        
+        .users-icon::before {
+            content: "👥";
+        }
+        
+        .settings-icon::before {
+            content: "⚙️";
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">Johnny's Store</a>
+                <span class="admin-badge">Admin</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Back to Store</a></li>
+                    <li><a href="index.html" class="active">Dashboard</a></li>
+                    <li><a href="stock-management.html">Stock</a></li>
+                    <li><a href="orders.html">Orders</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="admin-container">
+        <h1>Admin Dashboard</h1>
+        <p>Welcome to the Johnny's Store admin dashboard. Select a feature below to manage your store.</p>
+        
+        <div class="dashboard-grid">
+            <div class="dashboard-card">
+                <div class="dashboard-card-header">Inventory Management</div>
+                <div class="dashboard-card-body">
+                    <div class="dashboard-card-icon stock-icon"></div>
+                    <h3>Stock Management</h3>
+                    <p class="dashboard-card-description">View and adjust product inventory levels, set low stock alerts, and view stock history.</p>
+                    <a href="stock-management.html" class="dashboard-btn">Manage Stock</a>
+                </div>
+            </div>
+            
+            <div class="dashboard-card">
+                <div class="dashboard-card-header">Order Processing</div>
+                <div class="dashboard-card-body">
+                    <div class="dashboard-card-icon orders-icon"></div>
+                    <h3>Order Management</h3>
+                    <p class="dashboard-card-description">View and process customer orders, check order status, and manage fulfillment.</p>
+                    <a href="orders.html" class="dashboard-btn">Manage Orders</a>
+                </div>
+            </div>
+            
+            <div class="dashboard-card">
+                <div class="dashboard-card-header">User Accounts</div>
+                <div class="dashboard-card-body">
+                    <div class="dashboard-card-icon users-icon"></div>
+                    <h3>Customer Management</h3>
+                    <p class="dashboard-card-description">Manage customer accounts, view purchase history, and handle customer service.</p>
+                    <a href="#" class="dashboard-btn">Manage Users</a>
+                </div>
+            </div>
+            
+            <div class="dashboard-card">
+                <div class="dashboard-card-header">Store Settings</div>
+                <div class="dashboard-card-body">
+                    <div class="dashboard-card-icon settings-icon"></div>
+                    <h3>Configuration</h3>
+                    <p class="dashboard-card-description">Configure store settings, payment methods, shipping options, and more.</p>
+                    <a href="#" class="dashboard-btn">Settings</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2023 Johnny's Store. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html> 

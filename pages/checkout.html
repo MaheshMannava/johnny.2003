@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="x-icon" href="../assets/images/chrome2.png">
+    <title>Checkout - ©.JOHNNY.2003</title>
+    <link rel="stylesheet" href="../assets/css/product1.css">
+    <link rel="stylesheet" href="../assets/css/checkout.css">
+    <link rel="stylesheet" href="../assets/css/auth.css">
+    <link rel="stylesheet" href="../assets/css/notifications.css">
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="nextpage.html" class="navbar-text">&copy;.JOHNNY.2003</a>
+        </div>
+        <div class="navbar-right">
+            <div class="cart-container">
+                <img src="../assets/images/bag.png" alt="bag" class="bag-icon">
+                <!-- Cart Dropdown -->
+                <div id="cart-dropdown" class="cart-dropdown">
+                    <div class="cart-header">
+                        <h3>Your Cart</h3>
+                    </div>
+                    <div id="cart-items" class="cart-items">
+                        <!-- Cart items will be dynamically added here -->
+                    </div>
+                    <div class="cart-footer">
+                        <div class="cart-total">
+                            <span>Total:</span>
+                            <span id="cart-total-amount">₹0</span>
+                        </div>
+                        <button id="checkout-btn" class="checkout-btn">Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="checkout-container">
+        <div class="checkout-grid">
+            <!-- Left Column - Checkout Forms -->
+            <div class="checkout-form-container">
+                <div class="express-checkout-section">
+                    <h2>EXPRESS CHECKOUT</h2>
+                    <div class="express-buttons">
+                        <button class="express-button shop-pay">
+                            <img src="https://cdn.shopify.com/shopifycloud/shopify/assets/checkout/shop-pay-logo-sm-c13ceacbf0ee96913eaef79e51437b647533c14e7f381a96e5112ad6fd19c3ee.svg" alt="Shop Pay">
+                        </button>
+                        <button class="express-button paypal">
+                            <img src="https://cdn.shopify.com/shopifycloud/shopify/assets/checkout/paypal-logo-sm-e6958a68dc6d95ff8b23dbd0241f1a54b894760a2d68fd1a8070f1649c2d4cfa.svg" alt="PayPal">
+                        </button>
+                        <button class="express-button google-pay">
+                            <img src="https://cdn.shopify.com/shopifycloud/shopify/assets/checkout/google-pay-logo-sm-94963ffbf56fb3ef2e45c4c62fa25cb2b1b24619e4498988428defd3a296c799.svg" alt="Google Pay">
+                        </button>
+                    </div>
+                    <div class="separator">
+                        <div class="line"></div>
+                        <span>OR</span>
+                        <div class="line"></div>
+                    </div>
+                </div>
+
+                <div class="checkout-section">
+                    <h2>CONTACT</h2>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="EMAIL" required>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="marketing-consent">
+                        <label for="marketing-consent">EMAIL ME WITH NEWS AND OFFERS</label>
+                    </div>
+                </div>
+
+                <div class="checkout-section">
+                    <h2>DELIVERY</h2>
+                    <div class="form-group">
+                        <div class="country-select">
+                            <span>COUNTRY/REGION</span>
+                            <div class="select-wrapper">
+                                <select id="country">
+                                    <option value="US">UNITED STATES</option>
+                                    <option value="CA">CANADA</option>
+                                    <option value="UK">UNITED KINGDOM</option>
+                                    <option value="IN">INDIA</option>
+                                </select>
+                                <div class="select-arrow">&#9662;</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="name-fields">
+                        <div class="form-group half">
+                            <input type="text" id="first-name" placeholder="FIRST NAME" required>
+                        </div>
+                        <div class="form-group half">
+                            <input type="text" id="last-name" placeholder="LAST NAME" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="address" placeholder="ADDRESS" required>
+                        <div class="address-search-icon">&#128269;</div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="apartment" placeholder="APARTMENT, SUITE, ETC. (OPTIONAL)">
+                    </div>
+                    <div class="address-fields">
+                        <div class="form-group third">
+                            <input type="text" id="city" placeholder="CITY" required>
+                        </div>
+                        <div class="form-group third">
+                            <div class="select-wrapper">
+                                <select id="state" required>
+                                    <option value="" disabled selected>STATE</option>
+                                    <option value="AL">Alabama</option>
+                                    <option value="AK">Alaska</option>
+                                    <!-- Add more states here -->
+                                </select>
+                                <div class="select-arrow">&#9662;</div>
+                            </div>
+                        </div>
+                        <div class="form-group third">
+                            <input type="text" id="zip-code" placeholder="ZIP CODE" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" placeholder="PHONE" required>
+                        <div class="info-icon">&#9432;</div>
+                    </div>
+                </div>
+
+                <div class="checkout-section">
+                    <h2>SHIPPING METHOD</h2>
+                    <div class="shipping-methods">
+                        <p class="shipping-note">ENTER YOUR SHIPPING ADDRESS TO VIEW AVAILABLE SHIPPING METHODS.</p>
+                    </div>
+                </div>
+
+                <div class="checkout-section">
+                    <h2>PAYMENT</h2>
+                    <p class="security-note">ALL TRANSACTIONS ARE SECURE AND ENCRYPTED.</p>
+                    <div class="payment-method">
+                        <div class="payment-option selected">
+                            <div class="radio-button">
+                                <div class="radio-inner"></div>
+                            </div>
+                            <span>CREDIT CARD</span>
+                            <div class="payment-icons">
+                                <img src="https://cdn.shopify.com/shopifycloud/shopify/assets/payment_icons/visa-319d545c6fd255c9aad5eeaad21fd6f7f7b4fdbdb1a35ce83b89cca12a187f00.svg" alt="Visa">
+                                <img src="https://cdn.shopify.com/shopifycloud/shopify/assets/payment_icons/master-173035bc8124581983d4efa50cf8626e8553c2b311353fbf67485f9c1a2b88d1.svg" alt="Mastercard">
+                                <img src="https://cdn.shopify.com/shopifycloud/shopify/assets/payment_icons/american_express-2264c9b8b57b23b0b0831827e90cd7bcda2836adc42a912ebedf545dead35b20.svg" alt="American Express">
+                                <img src="https://cdn.shopify.com/shopifycloud/shopify/assets/payment_icons/discover-8265cfcf66b4751a571beb1a694fcf4e9f2bbac42a16c8c3b23924836cf64e20.svg" alt="Discover">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <div class="form-group">
+                            <input type="text" id="card-number" placeholder="CARD NUMBER" required>
+                            <div class="lock-icon">&#128274;</div>
+                        </div>
+                        <div class="card-extra-fields">
+                            <div class="form-group half">
+                                <input type="text" id="expiry-date" placeholder="EXPIRATION DATE (MM / YY)" required>
+                            </div>
+                            <div class="form-group half">
+                                <input type="text" id="security-code" placeholder="SECURITY CODE" required>
+                                <div class="info-icon">&#9432;</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="name-on-card" placeholder="NAME ON CARD" required>
+                        </div>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="billing-address" checked>
+                        <label for="billing-address">USE SHIPPING ADDRESS AS BILLING ADDRESS</label>
+                    </div>
+                    <div class="payment-option">
+                        <div class="radio-button">
+                            <div class="radio-inner empty"></div>
+                        </div>
+                        <span>PAYPAL</span>
+                        <img src="https://cdn.shopify.com/shopifycloud/shopify/assets/checkout/paypal-logo-sm-e6958a68dc6d95ff8b23dbd0241f1a54b894760a2d68fd1a8070f1649c2d4cfa.svg" alt="PayPal" class="paypal-icon">
+                    </div>
+                </div>
+
+                <div class="checkout-section">
+                    <h2>REMEMBER ME</h2>
+                </div>
+            </div>
+
+            <!-- Right Column - Order Summary -->
+            <div class="order-summary">
+                <div class="order-items">
+                    <div class="order-item">
+                        <div class="item-image">
+                            <img src="../assets/images/with belt balenci ghani johnny.png" alt="Product Image">
+                            <div class="item-quantity">2</div>
+                        </div>
+                        <div class="item-details">
+                            <div class="item-name">LANDON SUNGLASSES</div>
+                            <div class="item-variant">CHERRYWOOD, BROWN LENS / ONE SIZE</div>
+                        </div>
+                        <div class="item-price">₹3200.00</div>
+                    </div>
+                </div>
+
+                <div class="discount-section">
+                    <div class="form-group">
+                        <input type="text" id="discount-code" placeholder="DISCOUNT CODE">
+                        <button class="apply-btn">APPLY</button>
+                    </div>
+                </div>
+
+                <div class="summary-section">
+                    <div class="summary-line">
+                        <span>SUBTOTAL</span>
+                        <span>₹3200.00</span>
+                    </div>
+                    <div class="summary-line">
+                        <span>SHIPPING</span>
+                        <span class="shipping-value">
+                            <a href="#" class="shipping-link">ENTER SHIPPING ADDRESS</a>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="total-section">
+                    <div class="total-line">
+                        <span>TOTAL</span>
+                        <div class="total-price">
+                            <small>USD</small>
+                            <span class="big-price">₹3200.00</span>
+                        </div>
+                    </div>
+                    <button id="complete-checkout" class="checkout-btn">COMPLETE ORDER</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script type="module" src="../assets/js/mcp-supabase-bridge.js"></script>
+    <script type="module" src="../assets/js/supabase.js"></script>
+    <script type="module" src="../assets/js/auth.js"></script>
+    <script type="module" src="../assets/js/cart.js"></script>
+    <script type="module" src="../assets/js/debug-checkout.js"></script>
+    
+    <!-- Auth Modal -->
+    <div id="auth-modal" class="auth-modal">
+        <div class="modal-content">
+            <button id="close-btn" class="close-btn">&times;</button>
+            
+            <div class="auth-tabs">
+                <div id="login-tab" class="auth-tab active">Login</div>
+                <div id="register-tab" class="auth-tab">Register</div>
+            </div>
+            
+            <!-- Login Form -->
+            <form id="login-form" class="auth-form">
+                <div class="form-group">
+                    <input type="email" id="login-email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="login-password" placeholder="Password" required>
+                </div>
+                <button type="submit">Login</button>
+                <div id="forgot-password" class="forgot-password">Forgot Password?</div>
+            </form>
+            
+            <!-- Register Form -->
+            <form id="register-form" class="auth-form" style="display: none;">
+                <div class="form-group">
+                    <input type="email" id="register-email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="register-password" placeholder="Password" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+                </div>
+                <button type="submit">Register</button>
+            </form>
+            
+            <!-- Forgot Password Form -->
+            <form id="forgot-password-form" class="auth-form" style="display: none;">
+                <div class="form-group">
+                    <input type="email" id="forgot-email" placeholder="Email" required>
+                </div>
+                <button type="submit">Reset Password</button>
+            </form>
+            
+            <!-- Auth Message -->
+            <div id="auth-message" class="auth-message"></div>
+        </div>
+    </div>
+</body>
+</html> 

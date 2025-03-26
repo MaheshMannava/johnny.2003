@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="x-icon" href="../assets/images/chrome2.png">
+    <title>©.JOHNNY.2003</title>
+    <link rel="stylesheet" href="../assets/css/product1.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="nextpage.html" class="navbar-text">&copy;.JOHNNY.2003</a>
+        </div>
+        <div class="navbar-right">
+            <div class="cart-container">
+                <img src="../assets/images/bag.png" alt="bag" class="bag-icon">
+                <!-- Cart Dropdown -->
+                <div id="cart-dropdown" class="cart-dropdown">
+                    <div class="cart-header">
+                        <h3>Your Cart</h3>
+                    </div>
+                    <div id="cart-items" class="cart-items">
+                        <!-- Cart items will be dynamically added here -->
+                    </div>
+                    <div class="cart-footer">
+                        <div class="cart-total">
+                            <span>Total:</span>
+                            <span id="cart-total-amount">₹0</span>
+                        </div>
+                        <button id="checkout-btn" class="checkout-btn">Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="product-container">
+            <!-- Image Carousel -->
+            <div class="carousel">
+                <div class="carousel-images">
+                    <img src="../assets/images/carbi.png" alt="Product Image 2">
+                    <img src="../assets/images/carbi2.png" alt="Product Image 2">
+                  
+                </div>
+                <div class="carousel-buttons">
+                    <button class="carousel-button" id="prev">&#10094;</button>
+                    <button class="carousel-button" id="next">&#10095;</button>
+                </div>
+            </div>
+
+            <!-- Product Details -->
+            <div class="product-details">
+                <h1 class="product-name">JOHNNY X STUSSY CARABINER</h1>
+                <p class="product-description">₹1200.00</p>
+                <p class="product-description">Johnny x Stüssy  link metal carabiner.
+
+                    - Height: 2.2" / 55.3mm
+                    - Width: 3.1" / 79.3mm
+                    - Depth: 0.25" / 5.2mm
+                    - Velvet drawstring pouch included
+                    - Material: 98% zinc / 1% copper / 1% iron</p>
+                
+                <button class="add-to-cart">ADD TO BAG</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/product1.js"></script>
+</body>
+</html>

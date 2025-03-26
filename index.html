@@ -6,6 +6,7 @@
      <link rel="shortcut icon" type="x-icon" href="assets/images/chrome2.png">
     <title>©.JOHNNY.2003</title>
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/auth.css">
 </head>
 <body>
     <div class="container">
@@ -13,9 +14,31 @@
         <nav class="navbar">
             
             <a href="pages/nextpage.html" class="navbar-text">
-                ©.JoHnNY.2003
+                ©.JOHNNY.2003
             </a>
             
+            <!-- Auth Buttons Container -->
+            <div class="auth-buttons">
+                <!-- Login/Register buttons (shown when logged out) -->
+                <div class="login-register-container">
+                    <button id="login-btn" class="auth-btn">Login</button>
+                    <button id="register-btn" class="auth-btn">Register</button>
+                </div>
+                
+                <!-- User Profile (shown when logged in) -->
+                <div id="user-profile" class="user-profile" style="display: none;">
+                    <div id="user-initials" class="user-initials">JD</div>
+                </div>
+                
+                <!-- Dropdown Menu -->
+                <div id="dropdown-menu" class="dropdown-menu">
+                    <ul>
+                        <li id="my-account">My Account</li>
+                        <li id="my-orders">My Orders</li>
+                        <li id="logout">Logout</li>
+                    </ul>
+                </div>
+            </div>
         </nav>
 
         <!-- Main Content (Image) -->
@@ -27,6 +50,63 @@
         <div class="bottom-bar">
             <p>Exclusive Merch ® All Rights Reserved @PKCreativeWorks.</p>
         </div>
+        
+        <!-- Auth Modal -->
+        <div id="auth-modal" class="auth-modal">
+            <div class="modal-content">
+                <button id="close-btn" class="close-btn">&times;</button>
+                
+                <div class="auth-tabs">
+                    <div id="login-tab" class="auth-tab active">Login</div>
+                    <div id="register-tab" class="auth-tab">Register</div>
+                </div>
+                
+                <!-- Login Form -->
+                <form id="login-form" class="auth-form">
+                    <div class="form-group">
+                        <input type="email" id="login-email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="login-password" placeholder="Password" required>
+                    </div>
+                    <button type="submit">Login</button>
+                    <div id="forgot-password" class="forgot-password">Forgot Password?</div>
+                </form>
+                
+                <!-- Register Form -->
+                <form id="register-form" class="auth-form" style="display: none;">
+                    <div class="form-group">
+                        <input type="email" id="register-email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="register-password" placeholder="Password" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+                    </div>
+                    <button type="submit">Register</button>
+                </form>
+                
+                <!-- Forgot Password Form -->
+                <form id="forgot-password-form" class="auth-form" style="display: none;">
+                    <div class="form-group">
+                        <input type="email" id="forgot-email" placeholder="Email" required>
+                    </div>
+                    <button type="submit">Reset Password</button>
+                </form>
+                
+                <!-- Auth Message -->
+                <div id="auth-message"></div>
+            </div>
+        </div>
     </div>
+    
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.38.4/dist/umd/supabase.min.js"></script>
+    <script type="module" src="assets/js/mcp-supabase-bridge.js"></script>
+    <script type="module" src="assets/js/supabase.js"></script>
+    <script type="module" src="assets/js/auth.js"></script>
+    <script src="test-mcp-connection.js"></script>
+    <script src="assets/js/supabase-integration-test.js"></script>
 </body>
 </html>
