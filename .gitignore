@@ -1,2 +1,6 @@
 fix_paths.sh
 .env
+node_modules
+.cursor
+.gitignore
+.env
